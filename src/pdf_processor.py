@@ -24,7 +24,7 @@ def extract_text_from_pdf(pdf_path: str) -> str:
     return "\n".join(text_parts)
 
 
-def chunk_text(text: str, chunk_size: int = 200, overlap: int = 50) -> List[str]:
+def chunk_text(text: str, chunk_size: int = 300, overlap: int = 100) -> List[str]:
     """Split text into overlapping word-based chunks.
 
     Args:
@@ -56,7 +56,7 @@ def chunk_text(text: str, chunk_size: int = 200, overlap: int = 50) -> List[str]
     return chunks
 
 
-def process_pdf(pdf_path: str, chunk_size: int = 200, overlap: int = 50) -> List[str]:
+def process_pdf(pdf_path: str, chunk_size: int = 300, overlap: int = 100) -> List[str]:
     """Extract text from a PDF and return overlapping text chunks.
 
     Args:

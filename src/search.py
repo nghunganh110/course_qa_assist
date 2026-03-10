@@ -11,7 +11,7 @@ from .vectorizer import DocumentVectorizer
 def search(
     query: str,
     vectorizer: DocumentVectorizer,
-    top_k: int = 3,
+    top_k: int = 5,
     alpha: float = 0.5,
 ) -> List[Tuple[str, float]]:
     """Return the *top_k* most relevant chunks for *query*.
