@@ -45,7 +45,10 @@ def _answer_question(
         return history, ""
 
     if _vectorizer is None:
-        history = history + [[question, "⚠️  Please upload and process a PDF first."]]
+        history = history + [
+    {"role": "user", "content": question},
+    {"role": "assistant", "content": "⚠️  Please upload and process a PDF first."}
+]
         return history, ""
 
     results = search(question, _vectorizer, top_k=3)
@@ -60,7 +63,10 @@ def _answer_question(
             parts.append(f"**Passage {idx}** *(relevance: {score:.3f})*\n\n{chunk}")
         answer = "\n\n---\n\n".join(parts)
 
-    history = history + [[question, answer]]
+    history = history + [
+    {"role": "user", "content": question},
+    {"role": "assistant", "content": answer}
+]
     return history, ""
 
 
