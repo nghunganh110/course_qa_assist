@@ -1,0 +1,16 @@
+{
+  "raw_documents": 2703,
+  "chunks": 9137,
+  "avg_chunk_chars": 842,
+  "min_chunk_chars": 1,
+  "max_chunk_chars": 1000,
+  "indexing_time_s": 59.49,
+  "cleaned_docs": 2666,
+  "dropped_docs": 37,
+  "embedding_model": "nomic-embed-text",
+  "embedding_dim": 768,
+  "chunk_strategy": "RecursiveCharacterTextSplitter",
+  "chunk_size": 1000,
+  "chunk_overlap": 200,
+  "avg_retrieval_latency_ms": 18.9
+}

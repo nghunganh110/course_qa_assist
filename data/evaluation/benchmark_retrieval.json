@@ -1,0 +1,37 @@
+[
+  {
+    "id": "q1",
+    "query": "What are the primary characteristics and constraints of TinyML systems mentioned in the text?",
+    "category": "methodology",
+    "relevant_sources": ["13.Machine-Learning-Systems.pdf"],
+    "relevant_keywords": ["TinyML", "microcontrollers", "constraints"]
+  },
+  {
+    "id": "q2",
+    "query": "How is Artificial General Intelligence (AGI) defined as a systems problem in Chapter 20?",
+    "category": "methodology",
+    "relevant_sources": ["13.Machine-Learning-Systems.pdf"],
+    "relevant_keywords": ["AGI", "General Intelligence", "Systems Problem"]
+  },
+  {
+    "id": "q3",
+    "query": "What are the connectivity requirements for autonomous vehicles in real-time ML systems like Waymo?",
+    "category": "methodology",
+    "relevant_sources": ["13.Machine-Learning-Systems.pdf"],
+    "relevant_keywords": ["vehicles", "Waymo", "connectivity"]
+  },
+  {
+    "id": "q4",
+    "query": "How do large-scale ML systems manage coordination strategies for real-time processing?",
+    "category": "results",
+    "relevant_sources": ["13.Machine-Learning-Systems.pdf"],
+    "relevant_keywords": ["coordination strategies", "real-time processing", "large-scale"]
+  },
+  {
+    "id": "q5",
+    "query": "What role does the Scaling Hypothesis play in the development of Artificial General Intelligence?",
+    "category": "results",
+    "relevant_sources": ["13.Machine-Learning-Systems.pdf"],
+    "relevant_keywords": ["Scaling Hypothesis", "AGI"]
+  }
+]

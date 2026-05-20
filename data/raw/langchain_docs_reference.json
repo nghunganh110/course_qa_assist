@@ -1,0 +1,101 @@
+[
+  {
+    "page_content": "---\ntitle: Deep Agents\nurl: https://reference.langchain.com/javascript/deepagents\n---\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/deepagents-javascript",
+      "github_path": "src/oss/reference/deepagents-javascript.mdx",
+      "title": "Deep Agents",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 86
+    }
+  },
+  {
+    "page_content": "---\ntitle: Deep Agents\nurl: https://reference.langchain.com/python/deepagents\n---\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/deepagents-python",
+      "github_path": "src/oss/reference/deepagents-python.mdx",
+      "title": "Deep Agents",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 82
+    }
+  },
+  {
+    "page_content": "---\ntitle: Integrations\nurl: https://reference.langchain.com/javascript/langchain-community\n---\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/integrations-javascript",
+      "github_path": "src/oss/reference/integrations-javascript.mdx",
+      "title": "Integrations",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 96
+    }
+  },
+  {
+    "page_content": "---\ntitle: Integrations\nurl: https://reference.langchain.com/python/integrations/overview\n---\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/integrations-python",
+      "github_path": "src/oss/reference/integrations-python.mdx",
+      "title": "Integrations",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 94
+    }
+  },
+  {
+    "page_content": "---\ntitle: LangChain SDK\nurl: https://reference.langchain.com/javascript/langchain\n---\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/langchain-javascript",
+      "github_path": "src/oss/reference/langchain-javascript.mdx",
+      "title": "LangChain SDK",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 87
+    }
+  },
+  {
+    "page_content": "---\ntitle: LangChain SDK\nurl: https://reference.langchain.com/python/langchain\n---\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/langchain-python",
+      "github_path": "src/oss/reference/langchain-python.mdx",
+      "title": "LangChain SDK",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 83
+    }
+  },
+  {
+    "page_content": "---\ntitle: LangGraph SDK\nurl: https://reference.langchain.com/javascript/langchain-langgraph\n---\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/langgraph-javascript",
+      "github_path": "src/oss/reference/langgraph-javascript.mdx",
+      "title": "LangGraph SDK",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 97
+    }
+  },
+  {
+    "page_content": "---\ntitle: LangGraph SDK\nurl: https://reference.langchain.com/python/langgraph\n---\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/langgraph-python",
+      "github_path": "src/oss/reference/langgraph-python.mdx",
+      "title": "LangGraph SDK",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 83
+    }
+  },
+  {
+    "page_content": "---\ntitle: Reference\nsidebarTitle: Overview\n---\n\nComprehensive API reference documentation for the LangChain and LangGraph Python and TypeScript libraries.\n\n## Reference sites\n\n<CardGroup cols={2}>\n    :::python\n    <Card\n        title=\"Deep Agents\"\n        icon=\"/images/brand/deep-agents-icon.png\"\n        href=\"https://reference.langchain.com/python/deepagents\"\n    >\n        Build agents that can plan, use subagents, and leverage file systems for complex tasks.\n    </Card>\n\n    <Card\n        title=\"LangChain\"\n        icon=\"/images/brand/langchain-icon.png\"\n        href=\"https://reference.langchain.com/python/langchain\"\n    >\n        Complete API reference for LangChain Python, including chat models, tools, agents, and more.\n    </Card>\n\n    <Card\n        title=\"LangGraph\"\n        icon=\"/images/brand/langgraph-icon.png\"\n        href=\"https://reference.langchain.com/python/langgraph\"\n    >\n        Complete API reference for LangGraph Python, including graph APIs, state management, checkpointing, and more.\n    </Card>\n\n    <Card\n        title=\"LangChain Integrations\"\n        icon=\"plug\"\n        href=\"https://reference.langchain.com/python/integrations/overview\"\n    >\n        LangChain packages to connect with popular LLM providers, vector stores, tools, and other services.\n    </Card>\n\n    <Card\n        title=\"MCP Adapter\"\n        icon=\"plug\"\n        href=\"https://reference.langchain.com/python/langchain_mcp_adapters/\"\n    >\n        Use Model Context Protocol (MCP) tools within LangChain and LangGraph applications.\n    </Card>\n    :::\n\n    :::js\n    <Card\n        title=\"LangChain\"\n        icon=\"/images/brand/langchain-icon.png\"\n        href=\"https://reference.langchain.com/javascript/langchain\"\n    >\n        Complete API reference for LangChain JavaScript/TypeScript, including chat models, tools, agents, and more.\n    </Card>\n\n    <Card\n        title=\"LangGraph\"\n        icon=\"/images/brand/langgraph-icon.png\"\n        href=\"https://reference.langchain.com/javascript/langchain-langgraph\"\n    >\n        Complete API reference for LangGraph JavaScript/TypeScript, including graph APIs, state management, checkpointing, and more.\n    </Card>\n\n    <Card\n        title=\"Deep Agents\"\n        icon=\"/images/brand/deep-agents-icon.png\"\n        href=\"https://reference.langchain.com/javascript/deepagents\"\n    >\n        Build agents that can plan, use subagents, and leverage file systems for complex tasks\n    </Card>\n\n     <Card\n        title=\"LangChain Integrations\"\n        icon=\"plug\"\n        href=\"https://reference.langchain.com/javascript/langchain-community\"\n    >\n        LangChain packages to connect with popular LLM providers, vector stores, tools, and other services.\n    </Card>\n\n    <Card\n        title=\"MCP Adapter\"\n        icon=\"plug\"\n        href=\"https://reference.langchain.com/javascript/langchain-mcp-adapters\"\n    >\n        Use Model Context Protocol (MCP) tools within LangChain and LangGraph applications.\n    </Card>\n\n    <Card\n        title=\"Deep Agents\"\n        icon=\"/images/brand/deep-agents-icon.png\"\n        href=\"https://reference.langchain.com/javascript/deepagents\"\n    >\n        Build agents that can plan, use subagents, and leverage file systems for complex tasks.\n    </Card>\n    :::\n</CardGroup>\n\n",
+    "metadata": {
+      "source": "https://python.langchain.com/oss/reference/overview",
+      "github_path": "src/oss/reference/overview.mdx",
+      "title": "Reference",
+      "section": "reference",
+      "content_type": "narrative",
+      "content_length": 3260
+    }
+  }
+]

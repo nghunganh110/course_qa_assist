@@ -1,0 +1,224 @@
+{
+  "corpus": {
+    "num_raw_docs": 5,
+    "num_cleaned_docs": 2666,
+    "num_core_docs": 2666,
+    "num_chunks": 9137,
+    "filter": "excluded /python/integrations/ pages",
+    "chunking_strategy": "recursive",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "embedding_model": "mxbai-embed-large"
+  },
+  "benchmark": {
+    "num_questions": 5,
+    "k": 5,
+    "categories": {
+      "methodology": 3,
+      "results": 2
+    }
+  },
+  "strategies": {
+    "bm25": {
+      "avg_precision_at_k": 0.6,
+      "avg_recall_at_k": 0.6,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.628,
+      "avg_latency_ms": 34.8,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.8,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 39.4
+        },
+        "results": {
+          "avg_precision": 0.3,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 27.9
+        }
+      }
+    },
+    "hybrid_0.3/0.7": {
+      "avg_precision_at_k": 0.6,
+      "avg_recall_at_k": 0.6,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.6416,
+      "avg_latency_ms": 526.6,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.8,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 462.1
+        },
+        "results": {
+          "avg_precision": 0.3,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 623.5
+        }
+      }
+    },
+    "hybrid_0.5/0.5": {
+      "avg_precision_at_k": 0.72,
+      "avg_recall_at_k": 0.72,
+      "avg_mrr": 0.84,
+      "avg_ndcg_at_k": 0.7416,
+      "avg_latency_ms": 555.3,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.8667,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 496.4
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.6,
+          "avg_latency_ms": 643.8
+        }
+      }
+    },
+    "hybrid_0.7/0.3": {
+      "avg_precision_at_k": 0.76,
+      "avg_recall_at_k": 0.76,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.7755,
+      "avg_latency_ms": 630.5,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 611.3
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 659.2
+        }
+      }
+    },
+    "mmr_0.3": {
+      "avg_precision_at_k": 0.84,
+      "avg_recall_at_k": 0.84,
+      "avg_mrr": 0.9,
+      "avg_ndcg_at_k": 0.8428,
+      "avg_latency_ms": 1114.4,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 1.0,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 1032.8
+        },
+        "results": {
+          "avg_precision": 0.6,
+          "avg_mrr": 0.75,
+          "avg_latency_ms": 1236.8
+        }
+      }
+    },
+    "mmr_0.5": {
+      "avg_precision_at_k": 0.88,
+      "avg_recall_at_k": 0.88,
+      "avg_mrr": 0.9,
+      "avg_ndcg_at_k": 0.872,
+      "avg_latency_ms": 764.9,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 1.0,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 638.4
+        },
+        "results": {
+          "avg_precision": 0.7,
+          "avg_mrr": 0.75,
+          "avg_latency_ms": 954.6
+        }
+      }
+    },
+    "mmr_0.7": {
+      "avg_precision_at_k": 0.76,
+      "avg_recall_at_k": 0.76,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.7708,
+      "avg_latency_ms": 875.9,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 1037.4
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 633.6
+        }
+      }
+    },
+    "mmr_0.9": {
+      "avg_precision_at_k": 0.76,
+      "avg_recall_at_k": 0.76,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.7755,
+      "avg_latency_ms": 985.6,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 1029.6
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 919.6
+        }
+      }
+    },
+    "multi_query": {
+      "avg_precision_at_k": 0.8,
+      "avg_recall_at_k": 0.8,
+      "avg_mrr": 0.8,
+      "avg_ndcg_at_k": 0.8,
+      "avg_latency_ms": 4654.8,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 1.0,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 5324.3
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.5,
+          "avg_latency_ms": 3650.6
+        }
+      }
+    },
+    "similarity": {
+      "avg_precision_at_k": 0.76,
+      "avg_recall_at_k": 0.76,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.7755,
+      "avg_latency_ms": 716.8,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 789.8
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 607.2
+        }
+      }
+    }
+  },
+  "best_per_category": {
+    "methodology": "mmr_0.3",
+    "results": "mmr_0.5"
+  },
+  "benchmark_queries": [
+    "What are the primary characteristics and constraints of TinyML systems mentioned in the text?",
+    "How is Artificial General Intelligence (AGI) defined as a systems problem in Chapter 20?",
+    "What are the connectivity requirements for autonomous vehicles in real-time ML systems like Waymo?",
+    "How do large-scale ML systems manage coordination strategies for real-time processing?",
+    "What role does the Scaling Hypothesis play in the development of Artificial General Intelligence?"
+  ]
+}

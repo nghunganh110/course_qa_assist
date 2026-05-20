@@ -1,0 +1,44 @@
+{
+  "experiment": "phase9_ragas_evaluation",
+  "embed_model": "mxbai_large",
+  "llm_model": "mistral:7b",
+  "n_questions": 12,
+  "results": [
+    {
+      "config": "naive",
+      "scores": {
+        "faithfulness": 0.9180555555555555,
+        "answer_relevancy": 0.9401627719328243,
+        "context_precision": 0.99999999998,
+        "context_recall": 0.7678571428571429
+      },
+      "avg_score": 0.9065188675813807,
+      "avg_latency_ms": 2384.634502750001,
+      "eval_elapsed_s": 901.1118424169999
+    },
+    {
+      "config": "hybrid_reranked",
+      "scores": {
+        "faithfulness": 0.8541666666666666,
+        "answer_relevancy": 0.8375017225631475,
+        "context_precision": 0.9999999999795833,
+        "context_recall": 0.8138888888888889
+      },
+      "avg_score": 0.8763893195245716,
+      "avg_latency_ms": 3234.9618264166625,
+      "eval_elapsed_s": 1082.5136641870001
+    },
+    {
+      "config": "hyde",
+      "scores": {
+        "faithfulness": 0.8490675990675992,
+        "answer_relevancy": 0.8633392447859484,
+        "context_precision": 0.99999999998,
+        "context_recall": 0.7253174603174604
+      },
+      "avg_score": 0.8594310760377519,
+      "avg_latency_ms": 7857.34175325,
+      "eval_elapsed_s": 1292.947347976
+    }
+  ]
+}

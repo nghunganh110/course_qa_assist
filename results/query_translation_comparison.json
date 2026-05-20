@@ -1,0 +1,149 @@
+{
+  "phase": 5,
+  "corpus": {
+    "num_raw_docs": 2703,
+    "num_cleaned_docs": 2666,
+    "num_core_docs": 2666,
+    "num_chunks": 9137,
+    "filter": "excluded /python/integrations/ pages",
+    "chunking_strategy": "recursive",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "embedding_model": "mxbai-embed-large"
+  },
+  "benchmark": {
+    "num_questions": 5,
+    "k": 5,
+    "categories": {
+      "methodology": 3,
+      "results": 2
+    }
+  },
+  "llm": "mistral:7b",
+  "techniques": {
+    "decomposition": {
+      "avg_precision_at_k": 0.52,
+      "avg_recall_at_k": 0.52,
+      "avg_mrr": 0.6667,
+      "avg_ndcg_at_k": 0.528,
+      "avg_latency_ms": 1137.7,
+      "avg_llm_calls": 1.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.8,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 1178.7
+        },
+        "results": {
+          "avg_precision": 0.1,
+          "avg_mrr": 0.1666,
+          "avg_latency_ms": 1076.2
+        }
+      }
+    },
+    "hyde": {
+      "avg_precision_at_k": 0.8,
+      "avg_recall_at_k": 0.8,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.8,
+      "avg_latency_ms": 2745.8,
+      "avg_llm_calls": 1.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 2680.4
+        },
+        "results": {
+          "avg_precision": 0.6,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 2843.8
+        }
+      }
+    },
+    "multi_query": {
+      "avg_precision_at_k": 0.72,
+      "avg_recall_at_k": 0.72,
+      "avg_mrr": 0.8,
+      "avg_ndcg_at_k": 0.7369,
+      "avg_latency_ms": 1882.0,
+      "avg_llm_calls": 1.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 1918.9
+        },
+        "results": {
+          "avg_precision": 0.4,
+          "avg_mrr": 0.5,
+          "avg_latency_ms": 1826.7
+        }
+      }
+    },
+    "rag_fusion": {
+      "avg_precision_at_k": 0.8,
+      "avg_recall_at_k": 0.8,
+      "avg_mrr": 1.0,
+      "avg_ndcg_at_k": 0.8339,
+      "avg_latency_ms": 1899.9,
+      "avg_llm_calls": 1.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 1906.4
+        },
+        "results": {
+          "avg_precision": 0.6,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 1890.2
+        }
+      }
+    },
+    "similarity": {
+      "avg_precision_at_k": 0.76,
+      "avg_recall_at_k": 0.76,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.7755,
+      "avg_latency_ms": 28.7,
+      "avg_llm_calls": 0.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 29.9
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 26.9
+        }
+      }
+    },
+    "step_back": {
+      "avg_precision_at_k": 0.76,
+      "avg_recall_at_k": 0.76,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.7755,
+      "avg_latency_ms": 721.4,
+      "avg_llm_calls": 1.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 662.6
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 809.6
+        }
+      }
+    }
+  },
+  "best_per_category": {
+    "methodology": "hyde",
+    "results": "hyde"
+  }
+}

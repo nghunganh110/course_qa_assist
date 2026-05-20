@@ -1,0 +1,27 @@
+/* Side panel: better readability for source chunks */
+.element-side-view {
+    max-width: 600px;
+}
+
+.element-side-view pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Source links in message: subtle highlight */
+.message-content a[class*="element"] {
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+}
+
+.message-content a[class*="element"]:hover {
+    opacity: 0.8;
+}
+
+/* Step content: better spacing */
+.step-output {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}

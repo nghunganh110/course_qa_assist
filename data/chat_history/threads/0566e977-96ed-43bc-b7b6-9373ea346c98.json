@@ -1,0 +1,52 @@
+{
+  "id": "0566e977-96ed-43bc-b7b6-9373ea346c98",
+  "createdAt": "2026-05-20T15:55:05.708857+00:00",
+  "name": null,
+  "userId": null,
+  "userIdentifier": "local",
+  "tags": null,
+  "metadata": {},
+  "steps": [
+    {
+      "name": "on_chat_start",
+      "type": "run",
+      "id": "df09aa30-323d-4a6a-bcd8-c429b47da9ea",
+      "threadId": "0566e977-96ed-43bc-b7b6-9373ea346c98",
+      "parentId": null,
+      "streaming": false,
+      "metadata": {},
+      "tags": null,
+      "input": "{}",
+      "isError": false,
+      "output": "",
+      "createdAt": "2026-05-20T15:55:05.708667Z",
+      "start": "2026-05-20T15:55:05.708690Z",
+      "end": "2026-05-20T15:55:05.779656Z",
+      "language": null,
+      "defaultOpen": false,
+      "autoCollapse": false,
+      "showInput": "json",
+      "generation": null
+    },
+    {
+      "id": "233c805e-9bd7-4331-ab1a-3551b5364737",
+      "threadId": "0566e977-96ed-43bc-b7b6-9373ea346c98",
+      "parentId": "df09aa30-323d-4a6a-bcd8-c429b47da9ea",
+      "createdAt": "2026-05-20T15:55:05.778899Z",
+      "command": null,
+      "modes": null,
+      "start": "2026-05-20T15:55:05.778899Z",
+      "end": "2026-05-20T15:55:05.778899Z",
+      "output": "**Course QA Assistant ready**\n\n- Mode: Recommended (dense similarity)\n- Corpus: 2703 pages, 2666 cleaned docs, 9137 chunks\n- Embeddings: mxbai-embed-large (1024 dims)\n- Retrieval: similarity top-5\n- Reranking: disabled\n- LLM: mistral:7b",
+      "name": "Course QA Assistant",
+      "type": "assistant_message",
+      "language": null,
+      "streaming": false,
+      "isError": false,
+      "waitForAnswer": false,
+      "metadata": {},
+      "tags": null
+    }
+  ],
+  "elements": []
+}

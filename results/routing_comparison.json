@@ -1,0 +1,96 @@
+{
+  "phase": 6,
+  "corpus": {
+    "num_raw_docs": 2703,
+    "num_cleaned_docs": 2666,
+    "num_core_docs": 2666,
+    "num_chunks": 9137,
+    "filter": "excluded /python/integrations/ pages",
+    "chunking_strategy": "recursive",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "embedding_model": "mxbai-embed-large",
+    "category_split": {
+      "foundations": 1966,
+      "training_efficiency": 1951,
+      "operations_robustness": 2052,
+      "trust_frontiers": 1607,
+      "references_research": 1561
+    }
+  },
+  "benchmark": {
+    "num_questions": 5,
+    "k": 5,
+    "categories": {
+      "methodology": 3,
+      "results": 2
+    }
+  },
+  "llm": "mistral:7b",
+  "routing_accuracy": {
+    "logical": 0.8,
+    "semantic": 0.8
+  },
+  "techniques": {
+    "logical": {
+      "avg_precision_at_k": 0.68,
+      "avg_recall_at_k": 0.68,
+      "avg_mrr": 0.8,
+      "avg_ndcg_at_k": 0.7059,
+      "avg_latency_ms": 121.9,
+      "avg_llm_calls": 1.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.8,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 119.7
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.5,
+          "avg_latency_ms": 125.2
+        }
+      }
+    },
+    "no_routing": {
+      "avg_precision_at_k": 0.76,
+      "avg_recall_at_k": 0.76,
+      "avg_mrr": 0.8667,
+      "avg_ndcg_at_k": 0.7755,
+      "avg_latency_ms": 24.0,
+      "avg_llm_calls": 0.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 25.0
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.6666,
+          "avg_latency_ms": 22.4
+        }
+      }
+    },
+    "semantic": {
+      "avg_precision_at_k": 0.76,
+      "avg_recall_at_k": 0.76,
+      "avg_mrr": 0.8,
+      "avg_ndcg_at_k": 0.7661,
+      "avg_latency_ms": 40.7,
+      "avg_llm_calls": 0.0,
+      "per_category": {
+        "methodology": {
+          "avg_precision": 0.9333,
+          "avg_mrr": 1.0,
+          "avg_latency_ms": 41.0
+        },
+        "results": {
+          "avg_precision": 0.5,
+          "avg_mrr": 0.5,
+          "avg_latency_ms": 40.3
+        }
+      }
+    }
+  }
+}

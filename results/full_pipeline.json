@@ -1,0 +1,206 @@
+{
+  "experiment": "phase10_full_pipeline",
+  "decision": {
+    "default_config": "naive",
+    "reason": "highest Phase 9 RAGAS average score and lowest end-to-end latency",
+    "corpus": {
+      "raw_docs": 2703,
+      "cleaned_docs": 2666,
+      "chunks": 9137
+    },
+    "chunking": {
+      "strategy": "recursive",
+      "chunk_size": 1000,
+      "chunk_overlap": 200
+    },
+    "embedding_model": "mxbai_large",
+    "retrieval": {
+      "strategy": "similarity",
+      "final_k": 5
+    },
+    "reranking": {
+      "enabled": false,
+      "optional_recall_mode": "cross_encoder"
+    },
+    "phase9_scores": {
+      "faithfulness": 0.9180555555555555,
+      "answer_relevancy": 0.9401627719328243,
+      "context_precision": 0.99999999998,
+      "context_recall": 0.7678571428571429,
+      "avg_score": 0.9065188675813807,
+      "avg_latency_ms": 2384.634502750001
+    }
+  },
+  "component_summary": {
+    "llm": "mistral:7b",
+    "embeddings": "mxbai-embed-large",
+    "retrieval_strategy": "similarity",
+    "retrieval_k": 5,
+    "reranking_enabled": false,
+    "reranking_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "reranking_top_k": 5
+  },
+  "collection_name": "full_pipeline_course_mxbai_naive",
+  "index_time_s": 124.54198411300058,
+  "current_run": {
+    "generation_benchmark_ran": true,
+    "ragas_ran": false,
+    "num_questions": 12,
+    "latency_summary": {
+      "mean_ms": 5012.443566000002,
+      "p50_ms": 5238.477173000319,
+      "p95_ms": 7957.710867300284,
+      "mean_retrieval_ms": 36.105862249920996,
+      "mean_generation_ms": 4976.333857499715
+    },
+    "ragas_scores": {
+      "faithfulness": 0.9180555555555555,
+      "answer_relevancy": 0.9401627719328243,
+      "context_precision": 0.99999999998,
+      "context_recall": 0.7678571428571429,
+      "avg_score": 0.9065188675813807
+    },
+    "samples": [
+      {
+        "id": "c01",
+        "category": "conceptual",
+        "question": "What is the role of an ML System in the AI lifecycle?",
+        "answer": " The provided course materials do not explicitly state the role of an ML system in the AI lifecycle. However, it can be inferred that Machine Learning (ML) systems are a significant part of the modern era of Artificial Intelligence (AI), as discussed in section 1.6.4 \"Shallow Learning Era\" and section 1.6.5 \"Deep Learning Era\". The ML lifecycle, which is the focus of chapter 1.7, is described as being different from traditional software development lifecycles, emphasizing the importance of understanding these systems in AI practice.",
+        "latency_ms": 2863.640593999662,
+        "num_contexts": 5
+      },
+      {
+        "id": "c02",
+        "category": "conceptual",
+        "question": "What distinguishes TinyML systems from large-scale ML systems?",
+        "answer": " TinyML systems differ significantly from large-scale ML systems in terms of hardware specifications, latency characteristics, connectivity requirements, power consumption, and model complexity constraints. While large-scale ML systems operate in data centers with abundant resources, TinyML systems are designed for resource-constrained environments such as microcontrollers. These differences result from the extreme resource limitations of TinyML systems, which make them cost-effective and energy-efficient compared to Mobile ML systems but limit their model accuracy to 70-85% of cloud-based systems' level due to the complexity constraints. Additionally, TinyML systems allow for localized decision making, which is crucial in environments with limited connectivity.",
+        "latency_ms": 3240.1780759992107,
+        "num_contexts": 5
+      },
+      {
+        "id": "c03",
+        "category": "conceptual",
+        "question": "How does the Scaling Hypothesis relate to AGI development?",
+        "answer": " The Scaling Hypothesis suggests that increasing the size of transformer architectures, such as GPT-3, can lead to improvements in AI performance. However, it might face challenges in achieving Artificial General Intelligence (AGI) because these models excel at statistical learning but struggle with causal reasoning, which is essential for AGI.\n\nThe Scaling Hypothesis alone is insufficient for achieving AGI due to the importance of architectural innovation, efficiency improvements, and training paradigm advances. Choosing solely scaling can lead to wasted resources and unrealistic expectations.\n\nIn summary, while scaling models can bring improvements, it's not enough to achieve AGI without considering other factors such as architectural innovations and efficient learning methods.",
+        "latency_ms": 3506.0636390007858,
+        "num_contexts": 5
+      },
+      {
+        "id": "t01",
+        "category": "technical",
+        "question": "What are the key considerations for memory management in DNN architectures?",
+        "answer": " The key considerations for memory management in Deep Neural Network (DNN) architectures include:\n\n1. Memory Requirements: Different architectures have varying memory requirements due to their structural differences. For instance, Transformers require large memory capacities due to the quadratic scaling of activation storage, while CNNs exhibit more favorable memory scaling due to parameter sharing and localized processing (4.7 System-Level Building Blocks).\n\n2. Computation Needs: The computational needs of each architecture also impact memory management. For example, fully connected layers in DNNs require frequent access to large weight matrices, leading to more randomized memory access patterns that may not align well with standard caching policies (Neural networks).\n\n3. Data Movement: Efficient data movement is crucial for managing memory in DNNs. Convolutional layers benefit from spatial locality, enabling efficient caching of small weight kernels, while fully connected layers and Transformers may demand more complex data movement due to their requirements (Neural networks).\n\n4. System Implications: The system-level characteristics of neural network architectures should be considered when designing memory systems. These include memory requirements, computation needs, and data movement (4.2.4 System Implications). This framework helps in making informed decisions about system design, such as choosing memory hierarchy configurations and developing memory optimizations (4.2.4.1 Memory Requirements).\n\n5. Architecture Selection: When faced with real-world problems, it's important to choose the appropriate architecture based on the data structure and computational patterns (4.4 Architecture Selection Framework). The diversity of available architectures includes dense MLPs, CNNs, RNNs, Transformers, and sparse models, each embodying specific assumptions about data structure and computational patterns (4.2.4 System Implications).",
+        "latency_ms": 8184.765152998807,
+        "num_contexts": 5
+      },
+      {
+        "id": "t02",
+        "category": "technical",
+        "question": "How do AI training frameworks optimize cross-node communication?",
+        "answer": " AI training frameworks optimize cross-node communication through hybrid parallelism strategies, which minimize the amount of inter-device communication required during training. This efficient coordination speeds up the training process and enables the effective use of large-scale distributed systems where network latency might otherwise limit performance (Chapter 8, page 3). Additionally, federated optimization strategies in distributed learning frameworks also contribute to optimizing cross-node communication by allowing system-wide improvements while respecting the computational constraints of individual devices (Chapter 19, page 4).",
+        "latency_ms": 2645.0458879990038,
+        "num_contexts": 5
+      },
+      {
+        "id": "t03",
+        "category": "technical",
+        "question": "What is model quantization and how does it improve efficient AI?",
+        "answer": " Model quantization refers to the process of mapping high-precision weights and activations to lower-bit representations, enabling efficient execution on hardware accelerators such as GPUs, TPUs, and specialized AI chips (Chapter 11). This technique significantly reduces computational cost while maintaining acceptable accuracy levels, making it attractive for edge AI and resource-constrained environments.\n\nImproving efficient AI with model quantization:\nBy reducing the numerical precision of models, quantization allows for a drastic reduction in model size, which is crucial for devices with limited resources. This efficiency improvement is particularly significant in the context of edge AI applications where power consumption and computational complexity are critical factors (Jacob et al., 2018c).\n\nFuture advances in specialized hardware and training techniques will likely further enhance the role of quantization in efficient, scalable AI.",
+        "latency_ms": 3917.4585640012083,
+        "num_contexts": 5
+      },
+      {
+        "id": "h01",
+        "category": "how_to",
+        "question": "How do you implement data parallel training across multiple GPUs?",
+        "answer": " To implement data parallel training across multiple GPUs, follow these steps:\n\n1. Wrap your model with DistributedDataParallel if using PyTorch or DataParallel if using TensorFlow. This will automatically distribute the model across multiple GPUs.\n\n2. Initialize a distributed environment by launching multiple processes or using tools like Horovod, NCCL, or MPMDistributedDataParallel for better communication and synchronization between GPUs.\n\n3. Split your dataset into non-overlapping subsets and assign each subset to a different GPU. Each GPU will process its assigned data during the forward and backward passes.\n\n4. After processing all batches on each GPU, synchronize gradients across all nodes using all-reduce operations. This ensures that the gradients computed on different minibatches can be averaged while preserving mathematical equivalence to single-device training.\n\n5. Aggregate the synchronized gradients and update model parameters accordingly.\n\n6. Repeat steps 3-5 for each new mini-batch until the training is complete.\n\n7. Modern implementations use techniques like gradient accumulation to improve efficiency, allowing near-linear scaling up to hundreds of GPUs. However, communication overhead typically limits efficiency beyond 1000+ GPUs.",
+        "latency_ms": 5723.320412000248,
+        "num_contexts": 5
+      },
+      {
+        "id": "h02",
+        "category": "how_to",
+        "question": "How do you approach benchmarking an AI system's performance?",
+        "answer": " To approach benchmarking an AI system's performance, follow these steps:\n\n1. Identify the key performance metrics: These include accuracy, latency, throughput, energy consumption, fairness, and robustness. Different stakeholders may prioritize different metrics based on their specific needs.\n\n2. Develop a multidimensional assessment framework: This framework should reveal trade-offs across all relevant performance aspects to provide a comprehensive evaluation of the AI system.\n\n3. Use domain-specific benchmarks: These benchmarks capture specialized requirements that general benchmarks overlook, ensuring insights that drive targeted optimizations in both hardware and software for real-world deployment success.\n\n4. Evaluate the system across multiple domains: This approach helps ensure that the AI system performs well in various application scenarios.\n\n5. Continuously evolve benchmarking methodologies: As AI continues to advance, benchmarking methodologies must also adapt to evaluate performance not just in accuracy but also in efficiency, fairness, and robustness.\n\n6. Ensure transparency and documentation: Establish standards for benchmark documentation to maintain trustworthiness and promote the sharing of best practices among researchers and practitioners.",
+        "latency_ms": 5250.9144930008915,
+        "num_contexts": 5
+      },
+      {
+        "id": "h03",
+        "category": "how_to",
+        "question": "How do you deploy an ML model on an edge device?",
+        "answer": " To deploy an ML model on an edge device, consider the following steps:\n\n1. Model Optimization: Reduce the size and computational requirements of your machine learning model to fit within the limited resources available on edge devices. This may involve using techniques such as pruning, quantization, or distillation to create a smaller, more efficient version of your model.\n\n2. Choose an appropriate Edge ML framework: Select a specialized edge ML framework that can perform high-performance inference in resource-constrained environments. Examples include TensorFlow Lite, PyTorch Mobile, and ONNX Runtime.\n\n3. Consider the target hardware specifications: Ensure your chosen framework is compatible with the target edge device's hardware specifications. This may involve optimizing the model for energy efficiency and user experience requirements, as well as balancing model accuracy and resource utilization.\n\n4. Validate updates and detect performance regressions: Due to the absence of centralized monitoring in edge deployment scenarios, it is essential to implement methods for validating updates and detecting performance regressions. This may involve using techniques such as A/B testing or canary releases.\n\n5. Address governance challenges: Post-deployment learning introduces complications in model governance, including auditability, rollback, and privacy assurance. Implement appropriate measures to address these concerns.\n\n6. Deploy the optimized model using your chosen framework on the edge device.",
+        "latency_ms": 6260.598240998661,
+        "num_contexts": 5
+      },
+      {
+        "id": "e01",
+        "category": "error_related",
+        "question": "What are common causes of Out-Of-Memory (OOM) errors during deep learning training?",
+        "answer": " Common causes of Out-Of-Memory (OOM) errors during deep learning training include:\n\n1. Inefficient memory usage or failure to release GPU resources, leading to resource exhaustion (Figure 16.35).\n2. Static storage requirements that exceed available RAM due to the need to store intermediate feature maps and gradient information, especially in severely constrained platforms (Section [2]).\n3. The training process itself dramatically expanding the effective memory footprint by caching activations for each layer during the forward pass, which are then reused during gradient computation in the backward pass (Section [2]).\n4. Increased memory usage that accompanies prefetching and overlapping techniques, especially when training on GPUs with limited memory capacity (Section [4]).\n5. Activation Caching during backpropagation, where forward pass activations must be stored to compute gradients, dramatically increasing memory usage. Modern techniques like gradient checkpointing can help reduce memory by 80% at the cost of ~30% more compute time, but they may still exceed the static memory footprint anticipated during model deployment in highly constrained systems (Section [5]).",
+        "latency_ms": 5226.039852999747,
+        "num_contexts": 5
+      },
+      {
+        "id": "e02",
+        "category": "error_related",
+        "question": "How do you debug gradient vanishing in a deep neural network?",
+        "answer": " To debug gradient vanishing in a deep neural network, the following strategies can be employed based on the lecture notes provided:\n\n1. Change activation functions: The vanishing gradient problem is particularly prevalent with sigmoid and tanh activation functions due to their derivatives consistently being less than 1. Replacing these with Rectified Linear Unit (ReLU) activation functions can help mitigate this issue, as they output zero for negative inputs and the input directly for positive ones, preventing gradients from becoming too small.\n\n2. Adjust learning rate: A learning rate that is too large or too small can exacerbate the vanishing gradient problem. Adjusting the learning rate to find an optimal value can help improve the learning process.\n\n3. Use normalization techniques: Techniques such as batch normalization and layer normalization can help stabilize the distribution of activations across layers, reducing the likelihood of vanishing gradients.\n\n4. Implement gradient clipping: Gradient clipping involves limiting the magnitude of the gradients during backpropagation to prevent them from becoming excessively large (exploding gradients) or small (vanishing gradients). This can help maintain a more stable learning process.\n\n5. Consider using different network architectures: Some network architectures, such as Long Short-Term Memory (LSTM) networks and attention mechanisms, are designed to address the vanishing gradient problem in recurrent neural networks (RNNs) specifically. These may be worth exploring if you're working with sequential data.\n\n6. Regularization techniques: Techniques like dropout and weight decay can help prevent overfitting and improve the learning process by adding randomness to the network during training, which can help alleviate the vanishing gradient problem.",
+        "latency_ms": 7771.939179001492,
+        "num_contexts": 5
+      },
+      {
+        "id": "e03",
+        "category": "error_related",
+        "question": "What causes latency spikes in real-time ML inference systems?",
+        "answer": " Latency spikes in real-time ML inference systems can occur due to several reasons. One common cause is peak load, where the system receives a higher number of requests than it can handle efficiently, leading to increased processing time and latency (as mentioned in section 12.8.2.1).\n\nAnother reason could be resource contention, where multiple processes or tasks compete for shared resources like CPU, memory, or network bandwidth. This competition can lead to delays in the execution of individual tasks, resulting in increased latency (as discussed in section 3).\n\nLastly, improper model design or suboptimal model optimization techniques can also contribute to latency spikes. For example, using a complex model for a task that requires a simpler one, or not optimizing the model for the specific hardware constraints of the target device, can lead to increased processing time and higher latency (as explained in section 3).\n\nTo mitigate these issues, it's essential to consider various optimization strategies unique to the inference phase (as mentioned in section 3), such as pruning, quantization, or model compression techniques. Additionally, monitoring and managing resource allocation effectively can help maintain consistent latency performance in real-time ML inference systems.",
+        "latency_ms": 5559.358700000303,
+        "num_contexts": 5
+      }
+    ]
+  },
+  "phase9_reference": {
+    "experiment": "phase9_ragas_evaluation",
+    "embed_model": "mxbai_large",
+    "llm_model": "mistral:7b",
+    "n_questions": 12,
+    "results": [
+      {
+        "config": "naive",
+        "scores": {
+          "faithfulness": 0.9180555555555555,
+          "answer_relevancy": 0.9401627719328243,
+          "context_precision": 0.99999999998,
+          "context_recall": 0.7678571428571429
+        },
+        "avg_score": 0.9065188675813807,
+        "avg_latency_ms": 2384.634502750001,
+        "eval_elapsed_s": 901.1118424169999
+      },
+      {
+        "config": "hybrid_reranked",
+        "scores": {
+          "faithfulness": 0.8541666666666666,
+          "answer_relevancy": 0.8375017225631475,
+          "context_precision": 0.9999999999795833,
+          "context_recall": 0.8138888888888889
+        },
+        "avg_score": 0.8763893195245716,
+        "avg_latency_ms": 3234.9618264166625,
+        "eval_elapsed_s": 1082.5136641870001
+      },
+      {
+        "config": "hyde",
+        "scores": {
+          "faithfulness": 0.8490675990675992,
+          "answer_relevancy": 0.8633392447859484,
+          "context_precision": 0.99999999998,
+          "context_recall": 0.7253174603174604
+        },
+        "avg_score": 0.8594310760377519,
+        "avg_latency_ms": 7857.34175325,
+        "eval_elapsed_s": 1292.947347976
+      }
+    ]
+  }
+}

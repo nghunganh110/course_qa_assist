@@ -1,0 +1,234 @@
+{
+  "corpus": {
+    "total_chunks_before_filter": 9137,
+    "dropped_by_char_filter": 0,
+    "dropped_by_token_validation": 1,
+    "chunks_after_filter": 9136,
+    "max_chars_limit": 1400
+  },
+  "models": {
+    "minilm": {
+      "provider": "sentence-transformers",
+      "model_id": "all-MiniLM-L6-v2",
+      "dimensions": 384,
+      "max_tokens": 256,
+      "max_chars": 1400,
+      "description": "MiniLM L6 — Fastest, lightweight, solid baseline",
+      "throughput": {
+        "sample_size": 500,
+        "embedded_count": 500,
+        "corpus_time_s": 8.96,
+        "docs_per_sec": 55.8,
+        "avg_query_latency_ms": 18.1
+      },
+      "semantic_sanity": {
+        "avg_similar": 0.3971,
+        "avg_dissimilar": 0.0426,
+        "separation": 0.3545,
+        "similar_scores": [
+          0.3434,
+          0.5227,
+          0.4567,
+          0.2654
+        ],
+        "dissimilar_scores": [
+          0.1017,
+          0.0554,
+          0.0054,
+          0.0077
+        ]
+      },
+      "retrieval": {
+        "avg_top_score": 1.1306,
+        "avg_avg_score": 1.2028,
+        "avg_latency_ms": 18.5,
+        "index_time_s": 158.8,
+        "indexed_count": 9136
+      },
+      "disk": {
+        "dimensions": 384,
+        "indexed_chunks": 9136,
+        "embedding_mb": 13.4,
+        "estimated_total_mb": 18.7
+      }
+    },
+    "nomic_embed": {
+      "provider": "ollama",
+      "model_id": "nomic-embed-text",
+      "dimensions": 768,
+      "max_tokens": 8192,
+      "max_chars": 24000,
+      "description": "Nomic Embed Text — Good quality, Ollama-native",
+      "throughput": {
+        "sample_size": 500,
+        "embedded_count": 500,
+        "corpus_time_s": 4.58,
+        "docs_per_sec": 109.3,
+        "avg_query_latency_ms": 61.4
+      },
+      "semantic_sanity": {
+        "avg_similar": 0.5342,
+        "avg_dissimilar": 0.4339,
+        "separation": 0.1003,
+        "similar_scores": [
+          0.6174,
+          0.5206,
+          0.469,
+          0.53
+        ],
+        "dissimilar_scores": [
+          0.4753,
+          0.4304,
+          0.4089,
+          0.4211
+        ]
+      },
+      "retrieval": {
+        "avg_top_score": 0.5002,
+        "avg_avg_score": 0.6056,
+        "avg_latency_ms": 30.8,
+        "index_time_s": 141.3,
+        "indexed_count": 9136
+      },
+      "disk": {
+        "dimensions": 768,
+        "indexed_chunks": 9136,
+        "embedding_mb": 26.8,
+        "estimated_total_mb": 37.5
+      }
+    },
+    "bge_small": {
+      "provider": "sentence-transformers",
+      "model_id": "BAAI/bge-small-en-v1.5",
+      "dimensions": 384,
+      "max_tokens": 512,
+      "max_chars": 1400,
+      "description": "BGE Small — Strong MTEB performance for its size",
+      "throughput": {
+        "sample_size": 500,
+        "embedded_count": 500,
+        "corpus_time_s": 22.19,
+        "docs_per_sec": 22.5,
+        "avg_query_latency_ms": 17.6
+      },
+      "semantic_sanity": {
+        "avg_similar": 0.685,
+        "avg_dissimilar": 0.5322,
+        "separation": 0.1528,
+        "similar_scores": [
+          0.649,
+          0.7181,
+          0.6787,
+          0.6944
+        ],
+        "dissimilar_scores": [
+          0.5211,
+          0.5715,
+          0.4762,
+          0.56
+        ]
+      },
+      "retrieval": {
+        "avg_top_score": 0.5377,
+        "avg_avg_score": 0.5676,
+        "avg_latency_ms": 20.5,
+        "index_time_s": 343.1,
+        "indexed_count": 9136
+      },
+      "disk": {
+        "dimensions": 384,
+        "indexed_chunks": 9136,
+        "embedding_mb": 13.4,
+        "estimated_total_mb": 18.7
+      }
+    },
+    "mxbai_large": {
+      "provider": "ollama",
+      "model_id": "mxbai-embed-large",
+      "dimensions": 1024,
+      "max_tokens": 512,
+      "max_chars": 1400,
+      "description": "MxBAI Embed Large — Highest quality, most memory",
+      "throughput": {
+        "sample_size": 500,
+        "embedded_count": 500,
+        "corpus_time_s": 7.2,
+        "docs_per_sec": 69.4,
+        "avg_query_latency_ms": 21.8
+      },
+      "semantic_sanity": {
+        "avg_similar": 0.6199,
+        "avg_dissimilar": 0.4133,
+        "separation": 0.2066,
+        "similar_scores": [
+          0.5739,
+          0.6677,
+          0.6214,
+          0.6164
+        ],
+        "dissimilar_scores": [
+          0.4432,
+          0.4793,
+          0.3399,
+          0.3907
+        ]
+      },
+      "retrieval": {
+        "avg_top_score": 0.6855,
+        "avg_avg_score": 0.7209,
+        "avg_latency_ms": 33.9,
+        "index_time_s": 150.7,
+        "indexed_count": 9136
+      },
+      "disk": {
+        "dimensions": 1024,
+        "indexed_chunks": 9136,
+        "embedding_mb": 35.7,
+        "estimated_total_mb": 50.0
+      }
+    }
+  },
+  "benchmark_queries": [
+    "How do I create a basic RAG chain in LangChain?",
+    "What is an Embedding model?",
+    "How does RecursiveCharacterTextSplitter work?",
+    "What are the different types of memory in LangChain?",
+    "How do I use Ollama with LangChain?"
+  ],
+  "similar_pairs": [
+    [
+      "How to create a retriever",
+      "Building a document retrieval system"
+    ],
+    [
+      "Ollama LLM integration",
+      "Using local models with Ollama"
+    ],
+    [
+      "Text splitting strategies",
+      "How to chunk documents for RAG"
+    ],
+    [
+      "Vector database storage",
+      "Persisting embeddings in ChromaDB"
+    ]
+  ],
+  "dissimilar_pairs": [
+    [
+      "How to create a retriever",
+      "LangChain license information"
+    ],
+    [
+      "Token counting",
+      "Vector database persistence"
+    ],
+    [
+      "Chat model temperature settings",
+      "HTML parsing with BeautifulSoup"
+    ],
+    [
+      "Prompt template variables",
+      "Python package installation"
+    ]
+  ]
+}

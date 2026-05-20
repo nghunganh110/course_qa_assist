@@ -1,0 +1,74 @@
+[
+  {
+    "id": "c01",
+    "question": "What is the role of an ML System in the AI lifecycle?",
+    "ground_truth": "An ML system encompasses the end-to-end lifecycle of machine learning models, integrating data engineering, model training, efficient execution, and deployment into a cohesive pipeline. It bridges the gap between algorithmic design and scalable, real-world deployment by addressing system-level considerations such as hardware constraints, performance benchmarking, and ML operations (MLOps).",
+    "category": "conceptual"
+  },
+  {
+    "id": "c02",
+    "question": "What distinguishes TinyML systems from large-scale ML systems?",
+    "ground_truth": "TinyML systems run on microcontrollers and edge devices, constrained by severe limitations in memory, computing power, and energy consumption. They are designed for applications like smart sensors and voice assistants where power efficiency is critical. In contrast, large-scale ML systems handle massive workloads, requiring distributed infrastructure, high-throughput memory, and complex coordination strategies to scale processing across many nodes.",
+    "category": "conceptual"
+  },
+  {
+    "id": "c03",
+    "question": "How does the Scaling Hypothesis relate to AGI development?",
+    "ground_truth": "The Scaling Hypothesis suggests that simply scaling up neural network architectures, data sizes, and compute power will predictably yield increasingly general intelligence capabilities. In the context of AGI, this hypothesis positions the path to general intelligence largely as an engineering and systems scaling problem, predicting that larger models will intrinsically develop complex reasoning and capabilities without fundamentally new algorithmic paradigms.",
+    "category": "conceptual"
+  },
+  {
+    "id": "t01",
+    "question": "What are the key considerations for memory management in DNN architectures?",
+    "ground_truth": "Memory management in Deep Neural Networks (DNNs) involves balancing the large memory footprint of model weights, activations, and gradients against limited hardware memory. Key considerations include minimizing data movement to reduce energy consumption, employing strategies like gradient checkpointing or activation recomputation, and using memory hierarchies effectively to ensure high-bandwidth access during both training and inference.",
+    "category": "technical"
+  },
+  {
+    "id": "t02",
+    "question": "How do AI training frameworks optimize cross-node communication?",
+    "ground_truth": "AI training frameworks optimize cross-node communication using specialized collective communication primitives (like AllReduce, AllGather) and libraries such as NCCL or MPI. They often overlap computation with communication, utilize high-bandwidth interconnects (e.g., NVLink, InfiniBand), and employ network topologies that minimize latency to prevent communication bottlenecks during distributed data parallel or tensor parallel training.",
+    "category": "technical"
+  },
+  {
+    "id": "t03",
+    "question": "What is model quantization and how does it improve efficient AI?",
+    "ground_truth": "Model quantization reduces the precision of a model's numerical representations, such as converting 32-bit floating-point weights and activations to 8-bit integers. This significantly decreases the model's memory footprint and memory bandwidth requirements, while also allowing the use of faster, low-precision hardware arithmetic units. As a result, quantization improves inference latency and power efficiency, which is especially critical for on-device and efficient AI systems.",
+    "category": "technical"
+  },
+  {
+    "id": "h01",
+    "question": "How do you implement data parallel training across multiple GPUs?",
+    "ground_truth": "To implement data parallel training, you replicate the model across multiple GPUs and split each batch of training data across these devices. During the forward pass, each GPU computes predictions and loss for its data slice. In the backward pass, gradients from all GPUs are aggregated, typically using an AllReduce operation, and the models are synchronously updated with the averaged gradients so that all replicas remain identical.",
+    "category": "how_to"
+  },
+  {
+    "id": "h02",
+    "question": "How do you approach benchmarking an AI system's performance?",
+    "ground_truth": "Benchmarking an AI system involves using standardized metrics and suites, such as MLPerf, to evaluate performance. You must define clear objectives (e.g., throughput, latency, or energy efficiency) and select representative workloads and datasets. The benchmarking process requires isolating variables, running tests under realistic operating conditions, and analyzing the results to identify bottlenecks in either the hardware infrastructure or software stack.",
+    "category": "how_to"
+  },
+  {
+    "id": "h03",
+    "question": "How do you deploy an ML model on an edge device?",
+    "ground_truth": "Deploying an ML model on an edge device involves first optimizing the model through techniques like quantization, pruning, or knowledge distillation to fit within the device's constraints. Next, the optimized model is converted to a format compatible with edge inference engines (e.g., TensorFlow Lite, ONNX Runtime). Finally, the model is integrated into the device's application code, taking advantage of hardware accelerators like NPUs or DSPs if available.",
+    "category": "how_to"
+  },
+  {
+    "id": "e01",
+    "question": "What are common causes of Out-Of-Memory (OOM) errors during deep learning training?",
+    "ground_truth": "OOM errors during deep learning training are commonly caused by a batch size that is too large, excessively large model architectures, or storing too many intermediate activations for backpropagation. Other causes include memory leaks in the training loop, failing to clear gradients between steps, or concurrently loading excessively large datasets into the GPU memory without proper batching or streaming.",
+    "category": "error_related"
+  },
+  {
+    "id": "e02",
+    "question": "How do you debug gradient vanishing in a deep neural network?",
+    "ground_truth": "To debug gradient vanishing, monitor the magnitude of gradients across layers during training, particularly in early layers. If they shrink to near zero, consider using architectural solutions like residual connections (e.g., ResNet) or normalization layers (e.g., BatchNorm, LayerNorm). Additionally, check the choice of activation functions—replacing sigmoid or tanh with ReLU variants can help—and ensure proper weight initialization strategies like He or Xavier are used.",
+    "category": "error_related"
+  },
+  {
+    "id": "e03",
+    "question": "What causes latency spikes in real-time ML inference systems?",
+    "ground_truth": "Latency spikes in real-time ML inference systems can be caused by cold starts, network congestion, or garbage collection pauses in the runtime environment. Other factors include dynamic batching delays, sudden bursts in traffic leading to resource contention, or suboptimal cache utilization on the hardware. Identifying the root cause often requires detailed profiling of the end-to-end request lifecycle and resource monitoring.",
+    "category": "error_related"
+  }
+]

@@ -1,25 +1,61 @@
-# Byte-compiled / optimized / DLL files
+# Python caches and build output
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Distribution / packaging
-dist/
-build/
 *.egg-info/
-
-# Virtual environments
+*.egg
+build/
+dist/
+# Virtual environments and local env files
 .venv/
 venv/
 env/
-
-# Pytest cache
+.env
+.env.*
+!.env.example
+# Test, lint, coverage, and type-check caches
 .pytest_cache/
-
-# Jupyter Notebooks
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+# Jupyter
 .ipynb_checkpoints/
-
-# Editor metadata
-.idea/
+# IDE and editor state
 .vscode/
+.idea/
 *.swp
+*.swo
+*~
+.serena/
+.claude/
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+# Chainlit runtime files
+.files/
+.chainlit/*
+!.chainlit/
+!.chainlit/config.toml
+# Application runtime state
+data/chat_history/
+vectorstore/
+*.log
+logs/
+# Generated or large data artifacts
+data/raw/
+data/processed/
+data/lectures/*
+!data/lectures/
+!data/lectures/.gitkeep
+# Regenerable experiment outputs
+results/
+# Local notes / reports
+RAG_PROJECT.md
+REPORT.md
+CLAUDE.md
+ClAUDE.md

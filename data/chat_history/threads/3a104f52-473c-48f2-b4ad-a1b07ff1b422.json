@@ -1,0 +1,36 @@
+{
+  "id": "3a104f52-473c-48f2-b4ad-a1b07ff1b422",
+  "createdAt": "2026-05-20T15:55:32.303523+00:00",
+  "name": null,
+  "userId": null,
+  "userIdentifier": "local",
+  "tags": null,
+  "metadata": {
+    "settings": {
+      "rag_mode": "Recommended (dense similarity)",
+      "num_results": 5.0,
+      "show_sources": true,
+      "conversation_memory": true,
+      "comparison_mode": false
+    },
+    "pipeline": null,
+    "history": [
+      {
+        "role": "assistant",
+        "content": "name 'EMB_MODEL_KEY' is not defined"
+      }
+    ],
+    "chat_settings": {
+      "rag_mode": "Recommended (dense similarity)",
+      "num_results": 5.0,
+      "show_sources": true,
+      "conversation_memory": true,
+      "comparison_mode": false
+    },
+    "chat_profile": null,
+    "client_type": "webapp",
+    "env": {}
+  },
+  "steps": [],
+  "elements": []
+}

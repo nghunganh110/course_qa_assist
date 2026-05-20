@@ -1,0 +1,59 @@
+# ──────────────────────────────────────────────
+# Model Registry
+# ──────────────────────────────────────────────
+
+llm_models:
+  mistral_7b:
+    provider: ollama
+    model: mistral
+    description: "Mistral 7B — General-purpose, good instruction following"
+    context_window: 8192
+    recommended_num_ctx: 4096
+
+embedding_models:
+  nomic_embed:
+    provider: ollama
+    model: nomic-embed-text
+    dimensions: 768
+    max_tokens: 8192
+    # 8192 tokens, very generous context
+    max_chars: 24000
+    description: "Nomic Embed Text — Good quality, Ollama-native"
+
+  minilm:
+    provider: sentence-transformers
+    model: all-MiniLM-L6-v2
+    dimensions: 384
+    max_tokens: 256
+    # 256 tokens; sentence-transformers truncates silently (no error)
+    max_chars: 1400
+    truncates: true
+    description: "MiniLM L6 — Fastest, lightweight, solid baseline"
+
+  bge_small:
+    provider: sentence-transformers
+    model: BAAI/bge-small-en-v1.5
+    dimensions: 384
+    max_tokens: 512
+    # 512 tokens; sentence-transformers truncates silently (no error)
+    max_chars: 1400
+    truncates: true
+    description: "BGE Small — Strong MTEB performance for its size"
+
+  mxbai_large:
+    provider: ollama
+    model: mxbai-embed-large
+    dimensions: 1024
+    max_tokens: 512
+    # 512 tokens; Ollama raises an error if exceeded
+    max_chars: 1400
+    description: "MxBAI Embed Large — Highest quality, most memory"
+
+reranker_models:
+  ms_marco_mini:
+    model: cross-encoder/ms-marco-MiniLM-L-6-v2
+    description: "MS MARCO MiniLM — Fast, good accuracy"
+
+  ms_marco_base:
+    model: cross-encoder/ms-marco-MiniLM-L-12-v2
+    description: "MS MARCO MiniLM L12 — Better accuracy, slower"
